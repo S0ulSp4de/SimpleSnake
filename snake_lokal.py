@@ -8,15 +8,6 @@ import time
 #Erstelle einen einfachen Score Wert
 score = 0
 spiel_gestartet = True
-""" erstelle_turtle() verkürzt die Schreibarbeit für
- die Erstellung der verschiedenen Turtles im Spiel.
- Den letzten zwei Parametern von erstelle_turtle() wurden sogenannte
- Standardwerte hinzugefügt. Standardwerte (auch: default values) werden
- für die jeweiligen Parameter beim Aufruf der Funktion automatisch
- eingesetzt, wenn der Funktion nicht explizit Argumente für diese Parameter
- mitgegeben werden. Da die Steuerungsdreiecke die Mehrheit der
- Turtle-Elemente darstellen, wurden eine Dreiecksform und eine grüne
- Füllfarbe als Standardwerte für die Parameter shape und color gewählt. """
 def erstelle_turtle(x, y, rotationswinkel, shape="triangle", color="green"):
     element = turtle.Turtle()
     element.speed(0)  # Keine Animation, Turtle "springt" zum Zielpunkt
@@ -25,8 +16,8 @@ def erstelle_turtle(x, y, rotationswinkel, shape="triangle", color="green"):
     element.right(rotationswinkel)  # Nur für grüne Steuerungsdreiecke relevant
     element.penup()
     element.goto(x, y)
-    # Nur für Kopf relevant; "direction" ist nicht aus Turtle,
-    # sondern eine Variable von uns, die wir "element" dynamisch zuweisen
+    """Nur für Kopf relevant; "direction" ist nicht aus Turtle,
+     sondern eine Variable von uns, die wir "element" dynamisch zuweisen"""
     element.direction = "stop"
 
     return element
